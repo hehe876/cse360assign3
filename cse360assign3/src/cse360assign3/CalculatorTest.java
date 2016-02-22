@@ -6,30 +6,51 @@ import org.junit.Test;
 
 public class CalculatorTest {
 
+	Calculator dummy = new Calculator();
+	
 	@Test
 	public void testCalculator() {
-		Calculator dummy = new Calculator();
 		assertNotNull(dummy);
 	}
 	
 	public void testgetTotal(){
-		fail("Not yet implemented");
+		assertEquals(0,dummy.getTotal());
 	}
 	
 	public void testAdd() {
-		fail("Not yet implemented");
+		dummy.add(10);
+		assertEquals(10,dummy.getTotal());
+		dummy.add(12);
+		assertEquals(22,dummy.getTotal());
 	}
 	
 	public void testSubtract() {
-		fail("Not yet implemented");
+		dummy.add(10);
+		assertEquals(10,dummy.getTotal());
+		dummy.subtract(2);
+		assertEquals(8,dummy.getTotal());
+		dummy.subtract(9);
+		assertEquals(-1,dummy.getTotal());
 	}
 	
 	public void testMultiply() {
-		fail("Not yet implemented");
+		dummy.multiply(4);
+		assertEquals(0,dummy.getTotal());
+		dummy.add(2);
+		dummy.multiply(4);
+		assertEquals(8,dummy.getTotal());
+		dummy.multiply(0);
+		assertEquals(0,dummy.getTotal());
 	}
 	
 	public void testDivide() {
-		fail("Not yet implemented");
+		dummy.divide(4);
+		assertEquals(0,dummy.getTotal());
+		dummy.divide(0);
+		assertEquals(0,dummy.getTotal());
+		dummy.add(4);
+		dummy.divide(2);
+		assertEquals(2,dummy.getTotal());
 	}
 	
 	public void testGetHistory() {

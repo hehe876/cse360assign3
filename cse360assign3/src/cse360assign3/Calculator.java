@@ -20,19 +20,22 @@ public class Calculator {
 	}
 	
 	public void add (int value) {
-		
+		total += value;
 	}
 	
 	public void subtract (int value) {
-		
+		total -= value;
 	}
 	
 	public void multiply (int value) {
-		
+		total *= value;
 	}
 	
 	public void divide (int value) {
-		
+		if(value == 0)
+			total = 0;
+		else
+			total /= value;
 	}
 	
 	public String getHistory () {
