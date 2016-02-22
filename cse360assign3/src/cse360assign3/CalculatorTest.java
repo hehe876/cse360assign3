@@ -54,7 +54,12 @@ public class CalculatorTest {
 	}
 	
 	public void testGetHistory() {
-		fail("Not yet implemented");
+		assertEquals("0",dummy.getHistory());
+		dummy.add(4);
+		dummy.divide(2);
+		dummy.multiply(6);
+		dummy.subtract(13);
+		assertEquals("0 + 4 / 2 * 6 - 13",dummy.getHistory());
 	}
 	
 
