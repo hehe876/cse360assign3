@@ -21,7 +21,7 @@ public class Calculator {
 	 * @return
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**

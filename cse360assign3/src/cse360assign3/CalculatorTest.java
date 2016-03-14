@@ -13,10 +13,12 @@ public class CalculatorTest {
 		assertNotNull(dummy);
 	}
 	
+	@Test
 	public void testgetTotal(){
 		assertEquals(0,dummy.getTotal());
 	}
 	
+	@Test
 	public void testAdd() {
 		dummy.add(10);
 		assertEquals(10,dummy.getTotal());
@@ -24,6 +26,7 @@ public class CalculatorTest {
 		assertEquals(22,dummy.getTotal());
 	}
 	
+	@Test
 	public void testSubtract() {
 		dummy.add(10);
 		assertEquals(10,dummy.getTotal());
@@ -33,6 +36,7 @@ public class CalculatorTest {
 		assertEquals(-1,dummy.getTotal());
 	}
 	
+	@Test
 	public void testMultiply() {
 		dummy.multiply(4);
 		assertEquals(0,dummy.getTotal());
@@ -43,6 +47,7 @@ public class CalculatorTest {
 		assertEquals(0,dummy.getTotal());
 	}
 	
+	@Test
 	public void testDivide() {
 		dummy.divide(4);
 		assertEquals(0,dummy.getTotal());
@@ -53,6 +58,7 @@ public class CalculatorTest {
 		assertEquals(2,dummy.getTotal());
 	}
 	
+	@Test
 	public void testGetHistory() {
 		assertEquals("0",dummy.getHistory());
 		dummy.add(4);
